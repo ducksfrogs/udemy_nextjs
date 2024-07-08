@@ -4,7 +4,16 @@ import './App.css'
 
 function App() {
 
-  return <Post />;
+
+  return (
+    <>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+    </>
+
+  );
 }
 
 export default App

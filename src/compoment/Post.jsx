@@ -1,11 +1,14 @@
+const names = ['naxiu', 'mini'];
+
 function Post() {
-    return (<div>
-        <p>Maximuman</p>
+    const chooseName = Math.random() > 0.5 ? names[0] : names[1];
+
+    return (
+    <div>
+        <p>{chooseName}</p>
         <p>react js is awsome</p>
-        <h1>ddd</h1>
     </div>
     );
-
 }
 
 export default Post;
