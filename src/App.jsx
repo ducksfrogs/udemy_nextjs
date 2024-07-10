@@ -1,12 +1,11 @@
-import Post from './compoment/Post';
+import PostsList from './compoment/PostsList';
 
 import './App.css'
 
 function App() {
   return (
     <>
-      <Post auther="max" body="mmmm"/>
-      <Post auther="momomo" body="dddd"/>
+      <PostsList />
     </>
   );
 }
