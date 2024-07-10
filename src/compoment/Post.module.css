@@ -1,0 +1,14 @@
+.post{
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #9c7eee;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    animation: alternatein 1s ease-out forwards;
+}
+
+.author{
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}

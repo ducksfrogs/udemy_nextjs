@@ -3,16 +3,11 @@ import Post from './compoment/Post';
 import './App.css'
 
 function App() {
-
-
   return (
     <>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post auther="max" body="mmmm"/>
+      <Post auther="momomo" body="dddd"/>
     </>
-
   );
 }
 

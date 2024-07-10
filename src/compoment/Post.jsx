@@ -1,12 +1,13 @@
-const names = ['naxiu', 'mini'];
+import classes from'./Post.module.css';
 
-function Post() {
-    const chooseName = Math.random() > 0.5 ? names[0] : names[1];
+function Post(props) {
+    props.auther,
+    props.body
 
     return (
-    <div>
-        <p>{chooseName}</p>
-        <p>react js is awsome</p>
+    <div className={classes.post}>
+        <p className={classes.auther}>{props.auther}</p>
+        <p className={classes.text}>{props.body}</p>
     </div>
     );
 }
