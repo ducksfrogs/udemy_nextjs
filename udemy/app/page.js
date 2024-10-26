@@ -2,31 +2,28 @@ import Link from "next/link";
 
 import classes from './page.module.css';
 // import Header from '@/components/header';
-import MainHeader from "@/components/main-header/main-header";
+import ImageSlideshow from "@/components/image-slideshow";
 
 export default function Home() {
+  console.log("executed");
   return (
-
       <>
-      
-       <MainHeader />
-        <header className={classes.header}>
-          <div className={classes.slideshow}>
-
+      <header className={classes.header}>
+        <div className={classes.slideshow}>
+          <ImageSlideshow />
+        </div>
+        <div>
+          <div className={classes.hero}>
+            <h1>Next level hoood</h1>
+            <p>tatest %% yrda</p>
+          </div>
+          <div className={classes.cta} >
+            <Link href={"/community"} >community</Link>
+            <Link href={"/meals"} >meals</Link>
 
           </div>
-          <div>
-            <div className={classes.hero}>
-              <h1>Next level hoood</h1>
-              <p>tatest %% yrda</p>
-            </div>
-            <div className={classes.cta} >
-              <Link href={"/community"} >community</Link>
-              <Link href={"/meals"} >meals</Link>
-
-            </div>
-          </div>
-        </header>
+        </div>
+      </header>
       
 
       <main>
