@@ -1,9 +1,21 @@
+import { useState } from 'react';
+
 import { CORE_CONCEPTS } from './data.js';
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+    // let tabContent = 'Please click a button';
+    const [selectedTopic, setSelectedTopic] = useState('Please click a button');
+
+    function handleSelect (selectedButton) {
+        // selectedButton => 'components', 'jsx', 'props', 'state'
+      // tabContent = selectedButton;
+      setSelectedTopic(selectedButton);
+      console.log(selectedTopic);
+    }
+
   return (
       <div>
         <Header />
@@ -33,16 +45,13 @@ function App() {
           <section id="example">
             <h2>Example</h2>
             <menu>
-              <TabButton >Component</TabButton>
-              <TabButton >JSX</TabButton>
-              <TabButton >Props</TabButton>
-              <TabButton >Component</TabButton>
-
+              <TabButton onSelect={() => handleSelect('components')} >Component</TabButton>
+              <TabButton  onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+              <TabButton  onSelect={() => handleSelect('props')}>Props</TabButton>
+              <TabButton  onSelect={() => handleSelect('state')}>Component</TabButton>
             </menu>
+            {selectedTopic}
           </section>
-
-
-          <h2>Time to get started!</h2>
         </main>
       </div>
   );
