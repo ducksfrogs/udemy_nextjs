@@ -26,9 +26,9 @@ export default function UserInput({onChange, userInput}) {
                         value={userInput.expectedReturn} onChange={(event) => onChange('expectedReturn', event.target.value)}/>
                     </p>
                     <p>
-                        <label>Someting</label>
+                        <label>Duration</label>
                         <input type="number" required
-                        value={userInput.duraion} onChange={(event) => onChange('wpectedReturn', event.target.value)}/>
+                        value={userInput.duration} onChange={(event) => onChange('duraion', event.target.value)}/>
                     </p>
 
                 </div>

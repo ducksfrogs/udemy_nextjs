@@ -11,7 +11,7 @@ function App() {
         initialInvestment:1000,
         annualInvenstment: 1200,
         expectedReturn: 6,
-        duraion: 10
+        duration: 10
     });
 
     function handleChange(inputIdentifier, newValue){
