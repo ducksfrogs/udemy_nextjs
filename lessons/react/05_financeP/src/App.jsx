@@ -9,16 +9,19 @@ function App() {
 
     const [userInput, setUserInput] = useState({
         initialInvestment:1000,
-        annualInvenstment: 1200,
+        annualInvestment: 1200,
         expectedReturn: 6,
         duration: 10
     });
+
+    const inputIsValid = userInput.duration >=1 ;
+
 
     function handleChange(inputIdentifier, newValue){
         setUserInput(prevUserInput => {
             return {
                 ...prevUserInput, 
-                [inputIdentifier]: newValue
+                [inputIdentifier]: +newValue
             }
         });
     }
@@ -27,7 +30,8 @@ function App() {
     <>
       <Haeder />
       <UserInput userInput={userInput} onChange={handleChange} />
-      <Results input={userInput} />
+      {!inputIsValid && <p>input correct numper</p>}
+      {inputIsValid && <Results input={userInput} />}
     </>
   )
 }
