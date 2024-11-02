@@ -26,9 +26,9 @@ header h1 {
   margin: 0;
 }
 
- header p {
+.para{
   text-align: center;
-  /* color: #a39191; */
+  color: #a39191;
   /* color: red; */
   margin: 0;
 }
