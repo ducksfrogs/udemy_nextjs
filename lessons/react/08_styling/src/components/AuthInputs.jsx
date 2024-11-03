@@ -16,14 +16,14 @@ const Label = styled.label`
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${({invalid}) => invalid ? '#f87171' : '#6b7280'};
+  color: ${({$invalid}) => $invalid ? '#f87171' : '#6b7280'};
 `
 
 const Input = styled.input`
   width: 100%;
   padding: 0.75rem 1rem;
   line-height: 1.5;
-  background-color: ${({invalid}) => invalid ? '#fed2d2': '#d1d5db' };
+  background-color: ${({$invalid}) => $invalid ? '#fed2d2': '#d1d5db' };
   color: #374151;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -56,9 +56,9 @@ export default function AuthInputs() {
       <ControlContainer>
         <p>
           {/* <Label className={`label ${emailNotValid ? 'invalid' : '' }`}>Email</Label> */}
-          <Label invalid={emailNotValid}>Email</Label>
+          <Label $invalid={emailNotValid}>Email</Label>
           <Input
-            invalid={emailNotValid}
+            $invalid={emailNotValid}
             // style={{
             //   backgroundColor: emailNotValid ?  '#fed2d2' : '#d1d5db'
             //   // backgroundColor: emailNotValid ?  'red' : '#d1d5db'
@@ -73,7 +73,7 @@ export default function AuthInputs() {
           <Input
             type="password"
             // className={passwordNotValid ? 'invalid' : undefined}
-            invalid={passwordNotValid}
+            $invalid={passwordNotValid}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
