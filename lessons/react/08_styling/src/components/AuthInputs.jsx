@@ -65,7 +65,6 @@ export default function AuthInputs() {
             // }}
             type="email"
             // className={emailNotValid ? 'invalid' : undefined}
-            st
             onChange={(event) => handleInputChange('email', event.target.value)}
           />
         </p>
