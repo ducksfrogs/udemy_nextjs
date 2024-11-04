@@ -1,26 +1,10 @@
 import { useState } from 'react';
 
-import { styled } from 'styled-components';
 
 import Button from './Button';
 import Input from './Input';
 
-const ControlContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-`
 
-const Label = styled.label`
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: ${({$invalid}) => $invalid ? '#f87171' : '#6b7280'};
-`
 
 
 export default function AuthInputs() {
@@ -45,23 +29,15 @@ export default function AuthInputs() {
 
   return (
     <div id="auth-inputs">
-      <ControlContainer>
-        <p>
-          <Label $invalid={emailNotValid}>Email</Label>
-          <Input $invalid={emailNotValid} type="email" onChange={(event) => handleInputChange('email', event.target.value)}
+          <Input invalid={emailNotValid} label={'Email'} type="email" onChange={(event) => handleInputChange('email', event.target.value)}
+
           />
-        </p>
-        <p>
-          <Label className={`label ${passwordNotValid ? 'invalid' : '' }`}>Password</Label>
-          <Input
+          <Input invalid={passwordNotValid} label={'Password'}
             type="password"
-            $invalid={passwordNotValid}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
-          />
-        </p>
-      </ControlContainer>
+          /> 
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
